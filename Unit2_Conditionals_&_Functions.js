@@ -22,3 +22,17 @@ if (hungerLevel > 7) {
 } else {
   console.log("We can eat later!");
 }
+
+//Identity Operator checks if they are the same thing
+'apples' === 'oranges' // false
+
+
+//&& equals, || or, ! not
+let mood = 'sleepy';
+let tirednessLevel = 6;
+//if mood equals sleepy and tirednesslevel greater than 8
+if (mood === "sleepy" && tirednessLevel > 8) {
+  console.log("time to sleep");
+} else {
+	console.log("not bed time yet"); 
+}
