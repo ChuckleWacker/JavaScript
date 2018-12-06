@@ -51,7 +51,7 @@ console.log(stars);
 //  4. It will save memory in your code because it will cease to exist after the block finishes running.
 const logSkyColor = () => {
   const dusk = true;
-  let color = 'blue'; //Define Variable within block/function
+  let color = 'blue'; //Define Variable within a block inside a function
   if (dusk) {
     let color = 'pink';
     console.log(color); // pink
