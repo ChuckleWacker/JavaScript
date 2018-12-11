@@ -113,3 +113,120 @@ function calculateWeight(earthWeight, planet) {
   }
 }
 console.log(calculateWeight(100, 'Jupiter')) // Print 236
+
+
+//Truthy or Falsey arrow function
+const truthyOrFalsy = value => {
+    if (value) {
+        return true
+    }
+    return false
+}
+
+
+//Truthy or Falsey declaration function
+function truthyOrFalsy(value) {
+    if (value) {
+        return true
+    } else {
+        return false
+    }
+}
+
+//Truthy or Falsey ternary function
+const truthyOrFalsy = value => value ? true : false
+
+
+//Calculate Imaginary Friends whichis 33% of your real friends function
+function numImaginaryFriends(totalFriends) {
+  return Math.round(totalFriends * .33);
+}
+console.log(numImaginaryFriends(18)) // Print 6
+
+
+//Sentence function
+function sillySentence(string1, string2, string3) {
+  return `I am so ${string1} because I ${string2} coding! Time to write some more awesome ${string3}!`;
+}
+console.log(sillySentence('excited', 'love', 'functions')) //Print "I am so excited because I love coding! Time to write some more awesome functions!
+
+
+//How Old function (function expression w/ string interpolation)
+const howOld = (age, year) => {
+// The following two lines make it so that our function always knows the current year.
+    let dateToday = new Date();
+    let thisYear = dateToday.getFullYear();
+    const yearDifference = year - thisYear
+    const newAge = age + yearDifference
+    if (newAge < 0) {
+        return `The year ${year} was ${-newAge} years before you were born`
+    } else if (newAge > age) {
+        return `You will be ${newAge} in the year ${year}`
+    } else {
+        return `You were ${newAge} in the year ${year}`
+    }
+}
+
+
+//What Relation DNA function
+const whatRelation = percentSharedDNA => {
+    if (percentSharedDNA === 100) {
+        return 'You are likely identical twins.'
+    }
+    if (percentSharedDNA >= 35 && percentSharedDNA <= 99) {
+        return 'You are likely parent and child or full siblings.'
+    }
+    if (percentSharedDNA >= 14 && percentSharedDNA <= 34) {
+        return 'You are likely grandparent and grandchild, aunt/uncle and niece/nephew, or half siblings.'
+    }
+    if (percentSharedDNA >= 6 && percentSharedDNA <= 13) {
+        return 'You are likely 1st cousins.'
+    }
+    if (percentSharedDNA >= 3 && percentSharedDNA <= 5) {
+        return 'You are likely 2nd cousins.'
+    }
+    if (percentSharedDNA >= 1 && percentSharedDNA <= 2) {
+        return 'You are likely 3rd cousins'
+    }
+    return 'You are likely not related.'
+}
+console.log(whatRelation(34)) //Print 'You are likely grandparent and grandchild, aunt/uncle and niece/nephew, or half siblings.'
+console.log(whatRelation(3)) // Print 'You are likely 2nd cousins.'
+
+
+//Tip Calculator function (case function)
+function tipCalculator(quality, total) {
+  switch (quality) {
+    case "bad":
+      return total * .05;
+    case "ok":
+      return total * .15;
+    case "good":
+      return total * .20;
+    case "excellent":
+      return total * .30;
+    default:
+      return total * .18;
+  }
+}
+console.log(tipCalculator("good", 100)) //should return 20
+
+
+//Emoticon string function
+function toEmoticon(string1) {
+  switch (string1) {
+    case "shrug":
+      return `|_{"}_|`;
+    case "smiley face":
+      return `:)`;
+    case "frowny face":
+      return `:(`;
+    case "winky face":
+      return `;)`;
+    case "heart":
+      return `<3`;
+    default:
+      return `|_(* ~ *)_|`;
+  }
+}
+console.log(toEmoticon("whatever")) //Print  '|_(* ~ *)_|'
