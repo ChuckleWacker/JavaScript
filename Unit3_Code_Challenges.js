@@ -76,3 +76,8 @@ console.log(finalGrade(89, 82, 85)) // Print 'B'
 console.log(finalGrade(99, 92, 95)) // Print 'A'
 
 
+// Reporting For Duty function:
+function reportingForDuty(rank, lastName) {
+  return `${rank} ${lastName} reporting for duty!`;
+}
+console.log(reportingForDuty('Private', 'Fido')) // Should return 'Private Fido reporting for duty!'
