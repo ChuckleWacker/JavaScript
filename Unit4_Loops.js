@@ -4,7 +4,7 @@
 //DO...WHILE statements will run a code block at least once, then loop as long as a condition remains true
 //Nested for loops allow us to run multiple for loops at once.
 
-//LOOP prints 'Instagram', 'Facebook', 'Twitter'
+//FOR LOOP prints 'Instagram', 'Facebook', 'Twitter'
 let socialMedia = ['Instagram', 'Facebook', 'Twitter'];
 
 for (let socialMediaIndex = 0; socialMediaIndex < socialMedia.length; socialMediaIndex++) {
@@ -12,7 +12,7 @@ for (let socialMediaIndex = 0; socialMediaIndex < socialMedia.length; socialMedi
 }
 
 
-//LOOP prints "c 1 2 3 a 1 2 3 t 1 2 3"
+//FOR LOOP prints "c 1 2 3 a 1 2 3 t 1 2 3"
 //Each time the outer loop runs, the inner loop completes all iterations.
 const animal = 'cat';
 
@@ -22,3 +22,13 @@ for (let i = 0; i < animal.length; i++) {
     console.log(j);
   }
 }
+
+//FOR LOOP counts from 5 to 10
+for (let counter = 5; counter < 11; counter++) {
+  console.log(counter);
+}
+
+//FOR LOOP counter backwards from 3 to 0
+for (let counter = 3; counter >= 0; counter--){
+  console.log(counter)
+};
