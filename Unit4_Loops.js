@@ -1,6 +1,7 @@
 //Loops automatically iterate a block of code based on conditions.
 //FOR loops are appropriate when looping a predetermined number of times.
 //WHILE loops evaluate a condition for however long it’s true and the looping stops when the condition is false.
+//Nested for loops allow us to run multiple for loops at once.
 
 //LOOP prints 'Instagram', 'Facebook', 'Twitter'
 let socialMedia = ['Instagram', 'Facebook', 'Twitter'];
