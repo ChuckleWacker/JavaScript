@@ -1,3 +1,5 @@
+//Loops automatically iterate a block of code based on conditions.
+
 //LOOP prints 'Instagram', 'Facebook', 'Twitter'
 let socialMedia = ['Instagram', 'Facebook', 'Twitter'];
 
