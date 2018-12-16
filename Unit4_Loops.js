@@ -1,6 +1,7 @@
 //Loops automatically iterate a block of code based on conditions.
 //FOR loops are appropriate when looping a predetermined number of times.
 //WHILE loops evaluate a condition for however long it’s true and the looping stops when the condition is false.
+//DO...WHILE statements will run a code block at least once, then loop as long as a condition remains true
 //Nested for loops allow us to run multiple for loops at once.
 
 //LOOP prints 'Instagram', 'Facebook', 'Twitter'
