@@ -47,3 +47,15 @@ for (let i = 0; i < myArray.length; i++) {
   }
 };
 
+//NESTED LOOP comparing two different arrays for the same followers name
+const bobsFollowers = ["Dip", "Duck", "Dodge", "Dive"];
+const tinasFollowers = ["Dip", "Dan", "Dodge"];
+let mutualFollowers = [];  // write same names here using push()
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(tinasFollowers[j]);
+    }
+  }
+};
