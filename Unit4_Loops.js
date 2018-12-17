@@ -8,7 +8,7 @@
 let socialMedia = ['Instagram', 'Facebook', 'Twitter'];
 for (let socialMediaIndex = 0; socialMediaIndex < socialMedia.length; socialMediaIndex++) {
 	console.log(socialMedia[socialMediaIndex]);
-}
+};
 
 //FOR LOOP prints "c 1 2 3 a 1 2 3 t 1 2 3"
 //Each time the outer loop runs, the inner loop completes all iterations.
@@ -18,12 +18,12 @@ for (let i = 0; i < animal.length; i++) {
   for (let j = 1; j < 4; j++) {
     console.log(j);
   }
-}
+};
 
 //FOR LOOP counts from 5 to 10
 for (let counter = 5; counter < 11; counter++) {
   console.log(counter);
-}
+};
 
 //FOR LOOP counter backwards from 3 to 0
 for (let counter = 3; counter >= 0; counter--){
@@ -34,7 +34,7 @@ for (let counter = 3; counter >= 0; counter--){
 const vacationSpots = ['Bali', 'Paris', 'Tulum'];
 for (let i = 0; i < vacationSpots.length; i++) {
   console.log(`I would love to visit ${vacationSpots[i]}`);
-}
+};
 
 //NESTED LOOP comparing two different arrays for the same number
 const myArray = [6, 19, 20];
@@ -46,3 +46,4 @@ for (let i = 0; i < myArray.length; i++) {
     }
   }
 };
+
