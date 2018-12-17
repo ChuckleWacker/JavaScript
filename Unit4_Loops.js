@@ -6,16 +6,13 @@
 
 //FOR LOOP prints 'Instagram', 'Facebook', 'Twitter'
 let socialMedia = ['Instagram', 'Facebook', 'Twitter'];
-
 for (let socialMediaIndex = 0; socialMediaIndex < socialMedia.length; socialMediaIndex++) {
 	console.log(socialMedia[socialMediaIndex]);
 }
 
-
 //FOR LOOP prints "c 1 2 3 a 1 2 3 t 1 2 3"
 //Each time the outer loop runs, the inner loop completes all iterations.
 const animal = 'cat';
-
 for (let i = 0; i < animal.length; i++) {
   console.log(animal[i]);
   for (let j = 1; j < 4; j++) {
@@ -32,3 +29,9 @@ for (let counter = 5; counter < 11; counter++) {
 for (let counter = 3; counter >= 0; counter--){
   console.log(counter)
 };
+
+//ARRAY FOR LOOP
+const vacationSpots = ['Bali', 'Paris', 'Tulum'];
+for (let i = 0; i < vacationSpots.length; i++) {
+  console.log(`I would love to visit ${vacationSpots[i]}`);
+}
