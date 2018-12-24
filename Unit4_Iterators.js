@@ -18,7 +18,7 @@ const onlyNumbers = things.filter(thing => {
 });
 
 
-//FOREACH try using the arrow function, option #2
+//FOREACH Examples: use the arrow function, option #2
 //FOREACH option #1
 groceries.forEach(function(groceryItem) {
   console.log(" - " + groceryItem);
@@ -33,3 +33,46 @@ function printGrocery(element){
 }
 groceries.forEach(printGrocery);
 
+
+//MAP Examples
+// Example #1: Create the secretMessage array below
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+const secretMessage = animals.map(animal => {
+  return animal[0];
+})
+console.log(secretMessage.join('')); //Prints HelloWorld
+
+// Example #2: Create the smallNumbers array below
+const bigNumbers = [100, 200, 300, 400, 500];
+
+const smallNumbers = bigNumbers.map(bigNumber => {
+  return bigNumber / 100;
+})
+console.log(smallNumbers); //Prints [1, 2, 3, 4, 5]
+
+
+//FILTER Examples
+// Example #1: call .filter() on words below
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+console.log(words); // Output: ['chair', 'music', 'pillow', 'brick', 'pen', 'door']; 
+console.log(shortWords); // Output: ['chair', 'music', 'brick', 'pen', 'door']
+
+// Example #2: Call .filter() on randomNumbers below
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+const smallNumbers = randomNumbers.filter(randomNumber => {
+  return randomNumber < 250;
+})
+console.log(randomNumbers); // 375, 200, 3.14, 7, 13, 852
+console.log(smallNumbers); // 200, 3.14, 7, 13
+
+// Example #3: Call .filter() on favoriteWords below
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+const longFavoriteWords = favoriteWords.filter(favoriteWord => {
+  return favoriteWord.length > 7;
+})
+console.log(favoriteWords); // nostalgia, hyperbole, fervent, esoteric, serene
+console.log(longFavoriteWords); // nostalgia, hyperbole, esoteric
