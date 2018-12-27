@@ -65,7 +65,6 @@ let spaceship = {
     }
   }
 }; 
-
 let capFave = spaceship.crew.captain['favorite foods'][0]; // returns "cookies"
 let firstPassenger = spaceship.passengers[0]; // returns { name: 'Space Dog' }
 
@@ -106,7 +105,6 @@ let spaceship = {
         }
     }
 }; 
-
 // Iterates through spaceship.crew and logs crew roles/names
 for (let crewMember in spaceship.crew) {
   console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
@@ -115,3 +113,47 @@ for (let crewMember in spaceship.crew) {
 for (let crewMember in spaceship.crew) {
   console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`)
 };
+
+
+
+// THIS keyword allows a method to access other properties of an object, otherwise you get an undefined error
+const robot = {
+  model: "1E78V2",
+  energyLevel: 100,
+  provideInfo() {
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}`
+  },
+};
+console.log(robot.provideInfo());
+
+
+// DONT USE ARROW FUNCTIONS inside objects, they cause issues 
+const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`)
+  }
+}
+robot.checkEnergy();  // Energy is currently at 100%
+
+
+// GETTERS method, get and return internal properties of an object
+// Getters can perform an action on the data when getting a property.
+// Getters can return different values using conditionals.
+// In a getter, we can access the properties of the calling object using this.
+// The functionality of our code is easier for other developers to understand.
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  get energyLevel(){
+    if(typeof this._energyLevel === 'number') {
+      return 'My current energy level is ' + this._energyLevel
+    } else {
+      return "System malfunction: cannot retrieve energy level"
+    }
+  }
+};
+console.log(robot.energyLevel);
+
+
+// 
