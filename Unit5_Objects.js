@@ -180,4 +180,76 @@ robot.numOfSensors = 100;
 console.log(robot.numOfSensors);
 
 
-// FACTORY functions
+// FACTORY functions help create many instances of an object quickly
+const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep() {
+      console.log("Beep Boop")
+    }
+  }
+}
+const tinCan = robotFactory("P-500", true)
+tinCan.beep()  // prints "Beep Boop"
+
+
+// PROPERTY VALUE SHORTHAND are shortcuts for assigning properties to variables known as destructuring.
+// so this..
+function robotFactory(model, mobile){
+  return {
+    model: model,
+    mobile: mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+// is the same as this.. which just omits an extra parameter
+function robotFactory(model, mobile){
+  return {
+    model,
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+
+
+// DESTRUCTURED ASSIGNMENT
+// so this..
+const residence = vampire.residence; 
+console.log(residence); // Prints 'Transylvania'
+// is the same as this.. a variable with the name of an object's key that is wrapped in curly braces { }
+const { residence } = vampire; 
+console.log(residence); // Prints 'Transylvania'
+
+
+// BUILT-IN OBJECT METHODS
+const robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+// .KEYS saves property names (keys) into an array
+const robotKeys = Object.keys(robot);
+console.log(robotKeys); //['model', 'mobile', 'sentient', 'armor', 'energyLevel']
+
+// .ENTRIES saves property names (keys) & values into an array
+const robotEntries = Object.entries(robot)
+console.log(robotEntries); // same as robot property
+
+// .ASSIGN creates a new object with additional properties
+const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+console.log(newRobot);
+/*{ laserBlaster: true,
+  voiceRecognition: true,
+  model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75 }*/
