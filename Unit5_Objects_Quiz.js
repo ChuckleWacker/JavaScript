@@ -20,7 +20,7 @@ const refrigerator = {
 refrigerator['produce drawer'].fruit[0] 
 
 // A method is property with a function as its value.
-
+// Objects store unordered data if any type as key-value pairs.
 
 /* Evalues to:
 numDoors
@@ -36,4 +36,23 @@ for (let key in car) {
   console.log(key)
 }
 
+// Creating object literal syntax
+let myObject = {
+  greeting: 'hello'
+};
 
+// Destructured assignment example
+const myDog = {
+  name: 'Tadpole',
+  breed: 'mutt',
+  color: 'tan',
+  weight: 32
+}
+let {name} = myDog
+
+// Add a property to existing object
+let bikes = {
+  schwinn: 'blue',
+  trek: 'black'
+}
+bikes['specialized'] = 'red';
