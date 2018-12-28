@@ -21,20 +21,20 @@ const _= {
   
   // Splits string into an array of its words.
   words(string) {
-		return string.split(" ");
+    return string.split(" ")
   },
   
   /* Pads string on the left and right sides if it's shorter than length. Padding characters are truncated if they can't be evenly divided by length. */
   pad(string, length) {
-    let padding = length - string.length ;
-    let add = 0 ;
-    if ( padding <= 0 ) {
+    let padding = length - string.length;
+    let add = 0;
+    if (padding <= 0) {
       return string ;
-    } else if ( padding % 2 ) {
-      padding -= 1 ;
-      add += 1
+    } else if (padding % 2) {
+      padding -= 1;
+      add += 1;
     }
-    return ' '.repeat(padding / 2) + string + ' '.repeat(padding / 2) + ' '.repeat(add);
+    return ' '.repeat(padding / 2) + string + ' '.repeat(padding / 2) + ' '.repeat(add)
   },
   
   // Checks if path is a direct property of object.
@@ -45,20 +45,20 @@ const _= {
   
   /* Creates an object composed of the inverted keys and values of object. If object contains duplicate values, subsequent values overwrite property assignments of previous values. */
   invert(obj) {
-    let retObj = {};
+    let retObject = {};
     let keys = Object.keys(obj);
     for (let i = keys.length - 1; i >= 0; i--) {
-      retObj[`${obj[`${keys[i]}`]}`] = keys[i]
+      retObject[`${obj[`${keys[i]}`]}`] = keys[i]
     }
-    return retObj;
+    return retObject
   },
   
   /* This method is like _.find except that it returns the key of the first element predicate returns truthy for instead of the element itself. */
   findKey(obj, func) {
     let keys = Object.keys(obj);
     for (let i = 0; i < keys.length; i++) {
-      let ans = func(obj[`${keys[i]}`]);
-      if (ans) {
+      let found = func(obj[`${keys[i]}`]);
+      if (found) {
         return keys[i]
       }
       return undefined;
@@ -67,31 +67,25 @@ const _= {
   
   // Creates a slice of array with n elements dropped from the beginning.
   drop(array, number) {
-    if (typeof(number) === 'undefined') {
-      number = 1
-    }
-    return array.slice(number);
+    if (typeof(number) === 'undefined') {number = 1}
+    return array.slice(number)
   },
   
   /* Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array). */
   dropWhile(array, func) {
     let i = 0;
-    while (i < array.length && func(array[i], i, array)) {
-      i += 1;
-    }
-    return array.slice(i);
+    while (i < array.length && func(array[i], i, array)) {i += 1}
+    return array.slice(i)
   },
   
   /* Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements. */
   chunk(array, size) {
-    if (size === 0) {
-      size = 1
+    if (size === 0) {size = 1};
+    let retArray = [];
+    for (let i = 0; i < array.length; i += size) {
+      retArray.push(array.slice(i, i + size))
     }
-    let retAr = [];
-    for (let i = 0; idx < array.length; i += size) {
-      retAr.push(array.slice(i, i + size))
-    }
-    return retAr;
+    return retArray
   }
 }; 
 
